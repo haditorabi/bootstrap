@@ -87,15 +87,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 You can customize the appearance of popovers using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-popover"` to scope our custom appearance and use it to override some of the local CSS variables.
 
-```css
-.custom-popover {
-  --bs-popover-max-width: 200px;
-  --bs-popover-border-color: var(--bs-primary);
-  --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-white);
-  --bs-popover-body-padding: .5rem 1rem;
-}
-```
+{{< scss-docs name="custom-popovers" file="site/assets/scss/_component-examples.scss" >}}
 
 {{< example class="custom-popover-demo" >}}
 <button type="button" class="btn btn-secondary"
