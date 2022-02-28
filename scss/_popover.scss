@@ -58,23 +58,23 @@
   }
 }
 
-
 .bs-popover-top {
   > .popover-arrow {
     bottom: calc((var(--#{$variable-prefix}popover-arrow-height)) * -1); // stylelint-disable-line function-disallowed-list
 
+    &::before,
+    &::after {
+      border-width: var(--#{$variable-prefix}popover-arrow-height) calc(var(--#{$variable-prefix}popover-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
+    }
+
     &::before {
       bottom: 0;
       border-top-color: var(--#{$variable-prefix}popover-arrow-border);
-      border-top-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-inline-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
 
     &::after {
       bottom: var(--#{$variable-prefix}popover-border-width);
       border-top-color: var(--#{$variable-prefix}popover-bg);
-      border-top-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-inline-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
   }
 }
@@ -86,18 +86,19 @@
     width: var(--#{$variable-prefix}popover-arrow-height);
     height: var(--#{$variable-prefix}popover-arrow-width);
 
+    &::before,
+    &::after {
+      border-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5) var(--#{$variable-prefix}popover-arrow-height) calc(var(--#{$variable-prefix}popover-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
+    }
+
     &::before {
       left: 0;
       border-right-color: var(--#{$variable-prefix}popover-arrow-border);
-      border-right-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-block-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
 
     &::after {
       left: var(--#{$variable-prefix}popover-border-width);
       border-right-color: var(--#{$variable-prefix}popover-bg);
-      border-right-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-block-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
   }
 }
@@ -108,18 +109,19 @@
   > .popover-arrow {
     top: calc((var(--#{$variable-prefix}popover-arrow-height)) * -1); // stylelint-disable-line function-disallowed-list
 
+    &::before,
+    &::after {
+      border-width: 0 calc(var(--#{$variable-prefix}popover-arrow-width) * .5) var(--#{$variable-prefix}popover-arrow-height); // stylelint-disable-line function-disallowed-list
+    }
+
     &::before {
       top: 0;
       border-bottom-color: var(--#{$variable-prefix}popover-arrow-border);
-      border-bottom-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-inline-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
 
     &::after {
       top: var(--#{$variable-prefix}popover-border-width);
       border-bottom-color: var(--#{$variable-prefix}popover-bg);
-      border-bottom-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-inline-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
   }
 
@@ -143,18 +145,19 @@
     width: var(--#{$variable-prefix}popover-arrow-height);
     height: var(--#{$variable-prefix}popover-arrow-width);
 
+    &::before,
+    &::after {
+      border-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5) 0 calc(var(--#{$variable-prefix}popover-arrow-width) * .5) var(--#{$variable-prefix}popover-arrow-height); // stylelint-disable-line function-disallowed-list
+    }
+
     &::before {
       right: 0;
       border-left-color: var(--#{$variable-prefix}popover-arrow-border);
-      border-left-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-block-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
 
     &::after {
       right: var(--#{$variable-prefix}popover-border-width);
       border-left-color: var(--#{$variable-prefix}popover-bg);
-      border-left-width: var(--#{$variable-prefix}popover-arrow-height);
-      border-block-width: calc(var(--#{$variable-prefix}popover-arrow-width) * .5); // stylelint-disable-line function-disallowed-list
     }
   }
 }
